@@ -102,12 +102,15 @@ public class StudentList {
             try {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(allString.fileNameOfStudentNamesList)));
                 String lineOfStudentName = bufferedReader.readLine();
+
+                /* count the number of students by string array length */
                 String splitStudentName[] = lineOfStudentName.split(allString.commaCharacter);
 
                 System.out.println( splitStudentName.length + allString.printWordsFound);
             } catch (Exception e) {
             }
         }else{
+            /* invalid argument handling */
              System.out.println(allString.printWrongArgument);
         }
     }
